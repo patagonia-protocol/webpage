@@ -16,6 +16,7 @@ module.exports = {
         "size-05": "8px",
         "padding-vertical-main": "96px",
         "space-small": "24px",
+        "space-large": "64px",
       },
       borderRadius: {
         "radius-main": "8px",
