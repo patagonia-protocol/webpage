@@ -19,6 +19,7 @@ Desktop.ini # Windows desktop icon settings
 
 # Others
 *.log   # Log files
+/vertical-dark-timeline
 
 # dependencies
 /node_modules
