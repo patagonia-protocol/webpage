@@ -1,0 +1,107 @@
+.intro {
+  position: relative;
+  margin: 2em;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.25rem;
+  max-width: 26em;
+}
+.intro h1 {
+  margin-bottom: 0.5em;
+  line-height: 1;
+  font-weight: 100;
+}
+#CrossFade {
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  box-sizing: border-box;
+}
+#CrossFade img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4) rotate(12deg);
+  -webkit-animation: CrossFade 24s infinite;
+          animation: CrossFade 24s infinite;
+}
+#CrossFade img:nth-child(3) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+#CrossFade img:nth-child(2) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+#CrossFade img:nth-child(1) {
+  -webkit-animation-delay: 18s;
+          animation-delay: 18s;
+}
+/* 
+
+$duration = 12
+$slides = 4
+$step = $duration/$slides
+setDelayRevers($duration, $slides)
+  
+  for index in (2..$slides)
+    &:nth-child({index -1}) 
+      animation-delay ($step*index)s
+
+#CrossFade
+  height 100vh
+  overflow hidden
+  position relative
+  
+  display flex
+  img
+    align-self center
+    position absolute
+    
+    min-width 100%
+    min-height 100%
+    height auto
+    
+    backface-visibility hidden
+    opacity 0
+  
+    transform scale(1.4) rotate(12deg)
+    animation CrossFade ($duration)s infinite 
+    setDelayRevers($duration, $slides)   
+@keyframes CrossFade
+  25%
+    opacity 1
+    transform scale(1) rotate(0)
+  40%
+    opacity 0
+    
+*/
+@-webkit-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
