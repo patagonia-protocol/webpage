@@ -18,10 +18,10 @@
   background: #fff;
   display: flex;
   align-items: flex-end;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   position: relative;
-  width: 100%;
   border-radius: 32px;
   box-sizing: border-box;
 }

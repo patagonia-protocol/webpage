@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="./timeline.css" />
   <link rel="stylesheet" href="./crossfade.css" />
+  <link rel="stylesheet" href="./faq.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
         <div
           class="w-full h-[9.25rem] flex flex-col items-center justify-center relative min-w-[24rem] max-w-[32rem] mt-[2rem] text-[3rem]">
           <img class="absolute z-[0] object-cover right-[calc(2%)]" loading="lazy" alt="Patagonia Dirt"
-            src="/public/lil-of-earth.webp" />
+            src="/public/lil-of-earth.webp">
 
           <div
             class="self-stretch flex flex-row items-center justify-center flex-wrap content-center gap-[0.625rem] z-[1] text-shadow-[0px_2px_8px_rgba(0,_0,_0,_0.8)]">
@@ -99,357 +100,407 @@
       </div>
     </section>
     <section id="Proyecto"
-      class="self-stretch [background:linear-gradient(180deg,_#e7f4ff,_#fff)] overflow-hidden flex flex-row items-center justify-center flex-wrap content-center py-[6rem] px-[10.5rem] z-[2] text-left text-[1rem] text-[#131a1b] font-[Geist]">
-      <div
-        class="flex-1 flex flex-col items-start justify-start py-[0rem] pl-[0rem] pr-[3.5rem] box-border min-w-[17.563rem] max-w-[69rem]">
-        <div class="self-stretch flex flex-col items-start justify-start gap-[1.5rem]">
-          <div class="flex flex-row items-center justify-start gap-[0.75rem]">
-            <div class="w-[0.75rem] relative rounded-radius-round bg-[#006eb7] h-[0.75rem] overflow-hidden shrink-0">
+      class="self-stretch [background:linear-gradient(180deg,_#e7f4ff,_#fff)] flex-1 flex flex-col items-center justify-start flex-wrap py-[6rem] px-[10.5rem]">
+      <!-- putting title and crossfade slider in a adaptive container- even when I don't need to :v -->
+      <div id="title and crossfade container"
+        class="min-h-dvh max-h-full self-stretch flex flex-col items-start justify-start py-[1.5rem] gap-[1.75rem]">
+        <div class="flex flex-col items-start justify-start box-border min-w-[17.563rem] max-w-[69rem]">
+          <div class="self-stretch flex flex-col items-start justify-start gap-[1.5rem]">
+            <div class="flex flex-row items-center justify-start gap-[0.75rem]">
+              <div class="w-[0.75rem] relative rounded-radius-round bg-[#006eb7] h-[0.75rem] overflow-hidden shrink-0">
+              </div>
+              <div class="relative leading-[150%] font-medium">Proyecto Piloto</div>
             </div>
-            <div class="relative leading-[150%] font-medium">Proyecto Piloto</div>
-          </div>
-          <div class="self-stretch flex flex-col items-start justify-start text-[3rem]">
-            <h1
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-[inherit]">
-              Parque Ventisquero Grosse
-            </h1>
-            <h2
-              class="m-0 self-stretch relative text-[4rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
-              Donde Nace el Futuro
-            </h2>
-          </div>
-        </div>
-      </div>
-      <!-- CrossFade -->
-      <div id="CrossFade-Container"
-        class="h-dvh w-full self-stretch flex flex-col items-center justify-center py-[3rem] min-w-[17.563rem]">
-        <div id="CrossFade"> <img src="//unsplash.it/1600/900?image=1043" alt="img" /><img
-            src="//unsplash.it/1600/900?image=1039" alt="img" /><img src="//unsplash.it/1600/900?image=1017"
-            alt="img" /><img src="//unsplash.it/1600/900?image=929" alt="img" />
-          <div class="intro">
-            <h1>900 hectáreas de bosque andino virgen que son el corazón de nuestro primer piloto.</h1>
-            <p>Un lugar donde el silencio solo es interrumpido por el crujido de un glaciar milenario y el murmullo de un río turquesa. Aquí demostramos que es posible tocar la naturaleza sin dejar huella y que la conservación puede financiar su propio futuro.</p>
+            <div class="self-stretch flex flex-col items-start justify-start text-[3rem]">
+              <h1
+                class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-[inherit]">
+                Parque Ventisquero Grosse
+              </h1>
+              <h2
+                class="m-0 self-stretch relative text-[4rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
+                Donde Nace el Futuro
+              </h2>
+            </div>
           </div>
         </div>
         <!-- CrossFade -->
-    </section>
-    <main
-      class="self-stretch bg-[#fff] flex flex-col items-center justify-center pt-[0rem] px-[10.5rem] pb-[4rem] gap-[3rem] z-[3]">
-      <div
-        class="self-stretch relative [filter:drop-shadow(0px_4px_12px_rgba(0,_58,_108,_0.12))] border-[#e7f4ff] border-solid border-t-[2px] box-border h-[0.125rem]">
+        <div id="CrossFade" class="flex-1 w-full"> <img src="//unsplash.it/1600/900?image=1043" alt="img"><img
+            src="//unsplash.it/1600/900?image=1039" alt="img"><img src="//unsplash.it/1600/900?image=1017"
+            alt="img"><img src="//unsplash.it/1600/900?image=929" alt="img">
+          <div class="intro">
+            <h1>900 hectáreas de bosque andino virgen que son el corazón de nuestro primer piloto.</h1>
+            <p>Un lugar donde el silencio solo es interrumpido por el crujido de un glaciar milenario y el murmullo de
+              un río turquesa. Aquí demostramos que es posible tocar la naturaleza sin dejar huella y que la
+              conservación puede financiar su propio futuro.</p>
+          </div>
+        </div>
+        <!-- CrossFade -->
       </div>
-      <section
-        class="w-full flex flex-col items-start justify-center py-[1.5rem] px-[0rem] box-border gap-[0.75rem] min-w-[17.563rem] max-w-[69rem] text-left text-[2.5rem] text-[#006eb7] font-[Geist]">
-        <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
-          Nuestro Proceso en 4 Pasos:
-        </h2>
-        <div
-          class="self-stretch flex flex-row items-center justify-start flex-wrap content-center gap-[1.25rem] min-w-[17.563rem] text-[3rem] text-[#131a1b]">
-          <h2
-            class="m-0 flex-1 relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
-            De la protección al
-          </h2>
-          <h2
-            class="m-0 relative text-[4rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
-            Retorno
-          </h2>
-        </div>
-      </section>
-      <div
-        class="w-full flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] max-w-[69rem]">
-        <section
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
-          <div
-            class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
-            <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
-              src="/public/outline-privacy-unfold.gif" />
-
-            <div
-              class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
-              <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
-                Blindaje Legal a Perpetuidad
-              </h3>
-            </div>
-            <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
-              Adquirimos territorios de incalculable valor ecológico y los
-              protegemos con un escudo legal infranqueable: el Derecho Real de
-              Conservación. Esto garantiza que la tierra jamás será vendida ni
-              explotada, convirtiéndola en un santuario para siempre.
+      <!-- Accordion -->
+      <div class="self-stretch flex-1 flex-col items-center justify-center py-[3rem]">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon
+                sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
             </div>
           </div>
-          <div
-            class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
-            <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
-              src="/public/outline-coin.gif" />
-
-            <div
-              class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
-              <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
-                Tokenización del Ecosistema
-              </h3>
-            </div>
-            <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
-              Fraccionamos la propiedad legal del ecosistema (tierra +
-              operaciones) en Conservation Shares. Cada share es una
-              participación real y tangible. Al adquirirlos, te conviertes en
-              custodio y beneficiario directo de la salud del territorio.
+          <div class="accordion-item">
+            <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky
+                blue?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
             </div>
           </div>
-        </section>
-        <section
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
-          <div
-            class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
-            <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
-              src="/public/outline-growing-plant.gif" />
-
-            <div
-              class="w-full rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem] box-border max-w-[10.125rem]">
-              <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
-                Huella Mínima
-              </h3>
-            </div>
-            <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
-              Sobre el terreno protegido, construimos con respeto. Eco-lodges
-              modulares que se mimetizan con el paisaje y senderos elevados
-              que flotan sobre el suelo. Diseñamos experiencias turísticas de
-              alto valor que generan ingresos sin dejar rastro.
+          <div class="accordion-item">
+            <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover
+                aliens?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
             </div>
           </div>
-          <div
-            class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
-            <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
-              src="/public/outline-coins-jump.gif" />
-
-            <div
-              class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
-              <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
-                Retorno Tangible y Transparencia
-              </h3>
-            </div>
-            <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
-              Los ingresos generados por el turismo sostenible se distribuyen
-              automáticamente entre los dueños de los Conservation Shares. Tus
-              ganancias están directamente alineadas con la prosperidad del
-              ecosistema. Un mercado secundario te da liquidez, siempre bajo
-              el paraguas de la conservación.
+          <div class="accordion-item">
+            <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the
+                Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
-    <section id="blockchain"
-      class="self-stretch rounded-t-[48px] rounded-b-none bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center py-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
-      <section
-        class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
-        <div class="flex flex-row items-center justify-start gap-[0.75rem]">
-          <div class="h-[0.75rem] w-[0.75rem] relative rounded-radius-round bg-[#6edff3] overflow-hidden shrink-0">
-          </div>
-          <div class="relative leading-[150%] font-medium">Blockchain</div>
-        </div>
-        <div class="self-stretch flex flex-col items-start justify-start gap-[1.25rem] text-[3rem]">
-          <img class="w-[5.75rem] relative rounded-[200px] max-h-full overflow-hidden" loading="lazy" alt=""
-            src="/public/logo.svg" />
-
-          <div class="self-stretch flex flex-col items-start justify-start">
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3]">
-              El Token
-            </h2>
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
-              De Patagonia Protocol
-            </h2>
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
-              Tu Llave a la Conservación Real
-            </h2>
-          </div>
-          <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium">
-            Nuestro token no es un activo digital abstracto; es la
-            materialización de tu participación en un rincón virgen de la
-            Patagonia. Es el puente que conecta tu wallet directamente con un
-            bosque, un glaciar y un modelo de negocio sostenible.
+          <div class="accordion-item">
+            <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay
+                up?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="accordion-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse
+                potenti.</p>
+            </div>
           </div>
         </div>
-        <button
-          class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]">
-          <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
-            Habla con nosotros
-          </div>
-          <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
-        </button>
-      </section>
-      <section
-        class="flex-1 flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
-        <h2
-          class="m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
-          Tu Token, más que un activo, es:
-        </h2>
-        <div
-          class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
-          <h2
-            class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
-            Propiedad Real y Tangible
-          </h2>
-          <div class="self-stretch relative leading-[130%] font-medium">
-            Posees una fracción indivisible y legalmente registrada del
-            terreno y su infraestructura. Tu inversión tiene un respaldo
-            físico inalterable.
-          </div>
-        </div>
-        <div
-          class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
-          <h2
-            class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
-            Acceso Exclusivo a la Naturaleza
-          </h2>
-          <div class="self-stretch relative leading-[130%] font-medium text-[#fff]">
-            Disfruta de derechos preferentes para reservar estadías, acceder a
-            experiencias únicas y vivir en primera persona el impacto de tu
-            inversión.
-          </div>
-        </div>
-        <div
-          class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
-          <h2
-            class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
-            Participación en los Ingresos
-          </h2>
-          <div class="self-stretch relative leading-[130%] font-medium">
-            Recibe tu parte proporcional de los beneficios netos generados por
-            la operación turística. A medida que el proyecto prospera, tu
-            retorno también.
-          </div>
-        </div>
-      </section>
+      </div><!-- Accordion -->
     </section>
-    <section id="roadmap"
-      class="self-stretch bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center pb-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
+    <section
+      class="w-full flex flex-col items-start justify-center pb-[6rem] px-[0rem] box-border gap-auto min-w-[17.563rem] max-w-[69rem] text-left text-[2.5rem] text-[#006eb7] font-[Geist]">
+      <h2
+        class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
+        Nuestro Proceso en 4 Pasos:
+      </h2>
+      <div
+        class="flex-1 flex flex-col items-start justify-start flex-wrap content-start min-w-[17.563rem] text-[3rem] text-[#131a1b]">
+        <h2
+          class="m-0 flex-1 relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
+          De la protección al
+        </h2>
+        <h2
+          class="m-0 relative text-[4rem] tracking-[-0.04em] leading-[80%] italic font-normal font-['Instrument_Serif']">
+          Retorno
+        </h2>
+      </div>
+          <div
+      class="w-full flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] max-w-[69rem] py-[6rem]">
       <section
-        class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
-        <div class="flex flex-row items-center justify-start gap-[0.75rem]">
-          <div class="h-[0.75rem] w-[0.75rem] relative rounded-radius-round bg-[#6edff3] overflow-hidden shrink-0">
-          </div>
-          <div class="relative leading-[150%] font-medium">Roadmap</div>
-        </div>
-        <div class="self-stretch flex flex-col items-start justify-start gap-[1.25rem] text-[3rem]">
+        class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+        <div
+          class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
+          <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
+            src="/public/outline-privacy-unfold.gif">
 
-          <div class="self-stretch flex flex-col items-start justify-start">
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3]">
-              Nuestra Ruta:
-            </h2>
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
-              Pasos Firmes
-            </h2>
-            <h2
-              class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
-              Hacia la Conservación Escalable
-            </h2>
+          <div
+            class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
+            <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
+              Blindaje Legal a Perpetuidad
+            </h3>
           </div>
-          <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium">
-            La confianza se construye con acciones, no solo con promesas. Nuestro roadmap es un compromiso público con
-            la transparencia y la ejecución. Cada hito está diseñado para ser medible, verificable y para acercarnos a
-            un futuro donde miles de hectáreas estén protegidas bajo este modelo.
+          <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
+            Adquirimos territorios de incalculable valor ecológico y los
+            protegemos con un escudo legal infranqueable: el Derecho Real de
+            Conservación. Esto garantiza que la tierra jamás será vendida ni
+            explotada, convirtiéndola en un santuario para siempre.
           </div>
         </div>
-        <button
-          class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]">
-          <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
-            Habla con nosotros
+        <div
+          class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
+          <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
+            src="/public/outline-coin.gif">
+
+          <div
+            class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
+            <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
+              Tokenización del Ecosistema
+            </h3>
           </div>
-          <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
-        </button>
+          <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
+            Fraccionamos la propiedad legal del ecosistema (tierra +
+            operaciones) en Conservation Shares. Cada share es una
+            participación real y tangible. Al adquirirlos, te conviertes en
+            custodio y beneficiario directo de la salud del territorio.
+          </div>
+        </div>
       </section>
       <section
-        class="flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
-        <div class="timeline">
-          <div class="timeline-container primary">
-            <div class="timeline-icon">
-              <i class="fa fa-book" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-body">
-              <h4 class="timeline-title"><span class="badge">Q3 2025</span></h4>
-              <h2
-                class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
-                Fundación Legal y Tecnológica
-              </h2>
-              <p>Estructura jurídica blindada y smart contracts listos para operar. Plataforma digital (MVP)
-                desarrollada.</p>
-              <p class="timeline-subtitle">Jul–Sep 2025</p>
-            </div>
+        class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+        <div
+          class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
+          <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
+            src="/public/outline-growing-plant.gif">
+
+          <div
+            class="w-full rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem] box-border max-w-[10.125rem]">
+            <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
+              Huella Mínima
+            </h3>
           </div>
-          <div class="timeline-container primary">
-            <div class="timeline-icon">
-              <i class="fa fa-rocket" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-body">
-              <h4 class="timeline-title"><span class="badge">Q4 2025</span></h4>
-              <h2
-                class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
-                Lanzamiento y Adquisición
-              </h2>
-              <p>Primera emisión de tokens y compra del territorio piloto, asegurado con instrumentos de conservación a
-                perpetuidad.</p>
-              <p class="timeline-subtitle">Oct–Dec 2025</p>
-            </div>
-          </div>
-          <div class="timeline-container primary">
-            <div class="timeline-icon">
-              <i class="fa fa-leaf" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-body">
-              <h4 class="timeline-title"><span class="badge">Q1 2026</span></h4>
-              <h2
-                class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
-                Construcción Consciente
-              </h2>
-              <p>Despliegue de la infraestructura piloto de mínimo impacto: eco-lodge modular y senderos
-                interpretativos.</p>
-              <p class="timeline-subtitle">Ene–Mar 2026</p>
-            </div>
-          </div>
-          <div class="timeline-container primary">
-            <div class="timeline-icon">
-              <i class="fa fa-map-signs" aria-hidden="true"></i>
-            </div>
-            <div class="timeline-body">
-              <h4 class="timeline-title"><span class="badge">Q2 2026</span></h4>
-              <h2
-                class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
-                Inicio de Operaciones
-              </h2>
-              <p>Lanzamiento de las primeras experiencias turísticas. Recopilación de datos para optimizar el retorno y
-                la experiencia.</p>
-              <p class="timeline-subtitle">Abr–Jun 2026</p>
-            </div>
-          </div>
-          <div class="timeline-container primary">
-            <div class="timeline-icon">
-              <i class="fa fa-chart-line"></i>
-            </div>
-            <div class="timeline-body">
-              <h4 class="timeline-title"><span class="badge">Q3 2026+</span></h4>
-              <h2
-                class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
-                Expansión y Réplica
-              </h2>
-              <p>Escalar el modelo a nuevos territorios. Iniciar un nuevo ciclo de adquisición, tokenización y
-                protección.</p>
-              <p class="timeline-subtitle">Jul 2026+</p>
-            </div>
+          <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
+            Sobre el terreno protegido, construimos con respeto. Eco-lodges
+            modulares que se mimetizan con el paisaje y senderos elevados
+            que flotan sobre el suelo. Diseñamos experiencias turísticas de
+            alto valor que generan ingresos sin dejar rastro.
           </div>
         </div>
-        <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium py-[3rem]">
+        <div
+          class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
+          <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
+            src="/public/outline-coins-jump.gif">
+
+          <div
+            class="self-stretch rounded-lg bg-[#006eb7] flex flex-row items-start justify-start py-[0.5rem] px-[0.75rem]">
+            <h3 class="m-0 flex-1 relative text-[length:inherit] leading-[150%] font-bold font-[inherit]">
+              Retorno Tangible y Transparencia
+            </h3>
+          </div>
+          <div class="self-stretch relative leading-[130%] font-medium text-[#131a1b]">
+            Los ingresos generados por el turismo sostenible se distribuyen
+            automáticamente entre los dueños de los Conservation Shares. Tus
+            ganancias están directamente alineadas con la prosperidad del
+            ecosistema. Un mercado secundario te da liquidez, siempre bajo
+            el paraguas de la conservación.
+          </div>
+        </div>
+      </section>
+    </div>
+    </section>
+  </div>
+
+  <section id="blockchain"
+    class="self-stretch rounded-t-[48px] rounded-b-none bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center py-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
+    <section
+      class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
+      <div class="flex flex-row items-center justify-start gap-[0.75rem]">
+        <div class="h-[0.75rem] w-[0.75rem] relative rounded-radius-round bg-[#6edff3] overflow-hidden shrink-0">
+        </div>
+        <div class="relative leading-[150%] font-medium">Blockchain</div>
+      </div>
+      <div class="self-stretch flex flex-col items-start justify-start gap-[1.25rem] text-[3rem]">
+        <img class="w-[5.75rem] relative rounded-[200px] max-h-full overflow-hidden" loading="lazy" alt=""
+          src="/public/logo.svg" />
+
+        <div class="self-stretch flex flex-col items-start justify-start">
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3]">
+            El Token
+          </h2>
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
+            De Patagonia Protocol
+          </h2>
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
+            Tu Llave a la Conservación Real
+          </h2>
+        </div>
+        <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium">
+          Nuestro token no es un activo digital abstracto; es la
+          materialización de tu participación en un rincón virgen de la
+          Patagonia. Es el puente que conecta tu wallet directamente con un
+          bosque, un glaciar y un modelo de negocio sostenible.
+        </div>
+      </div>
+      <button
+        class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]">
+        <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
+          Habla con nosotros
+        </div>
+        <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
+      </button>
+    </section>
+    <section
+      class="flex-1 flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+      <h2
+        class="m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
+        Tu Token, más que un activo, es:
+      </h2>
+      <div
+        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        <h2
+          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
+          Propiedad Real y Tangible
+        </h2>
+        <div class="self-stretch relative leading-[130%] font-medium">
+          Posees una fracción indivisible y legalmente registrada del
+          terreno y su infraestructura. Tu inversión tiene un respaldo
+          físico inalterable.
+        </div>
+      </div>
+      <div
+        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        <h2
+          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
+          Acceso Exclusivo a la Naturaleza
+        </h2>
+        <div class="self-stretch relative leading-[130%] font-medium text-[#fff]">
+          Disfruta de derechos preferentes para reservar estadías, acceder a
+          experiencias únicas y vivir en primera persona el impacto de tu
+          inversión.
+        </div>
+      </div>
+      <div
+        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        <h2
+          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
+          Participación en los Ingresos
+        </h2>
+        <div class="self-stretch relative leading-[130%] font-medium">
+          Recibe tu parte proporcional de los beneficios netos generados por
+          la operación turística. A medida que el proyecto prospera, tu
+          retorno también.
+        </div>
+      </div>
+    </section>
+  </section>
+  <section id="roadmap"
+    class="self-stretch bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center pb-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
+    <section
+      class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
+      <div class="flex flex-row items-center justify-start gap-[0.75rem]">
+        <div class="h-[0.75rem] w-[0.75rem] relative rounded-radius-round bg-[#6edff3] overflow-hidden shrink-0">
+        </div>
+        <div class="relative leading-[150%] font-medium">Roadmap</div>
+      </div>
+      <div class="self-stretch flex flex-col items-start justify-start gap-[1.25rem] text-[3rem]">
+
+        <div class="self-stretch flex flex-col items-start justify-start">
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3]">
+            Nuestra Ruta:
+          </h2>
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
+            Pasos Firmes
+          </h2>
+          <h2
+            class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
+            Hacia la Conservación Escalable
+          </h2>
+        </div>
+        <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium">
           La confianza se construye con acciones, no solo con promesas. Nuestro roadmap es un compromiso público con
           la transparencia y la ejecución. Cada hito está diseñado para ser medible, verificable y para acercarnos a
           un futuro donde miles de hectáreas estén protegidas bajo este modelo.
         </div>
-  </div>
-  </section>
+      </div>
+      <button
+        class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]">
+        <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
+          Habla con nosotros
+        </div>
+        <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
+      </button>
+    </section>
+    <section
+      class="flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+      <div class="timeline">
+        <div class="timeline-container primary">
+          <div class="timeline-icon">
+            <i class="fa fa-book" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-body">
+            <h4 class="timeline-title"><span class="badge">Q3 2025</span></h4>
+            <h2
+              class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
+              Fundación Legal y Tecnológica
+            </h2>
+            <p>Estructura jurídica blindada y smart contracts listos para operar. Plataforma digital (MVP)
+              desarrollada.</p>
+            <p class="timeline-subtitle">Jul–Sep 2025</p>
+          </div>
+        </div>
+        <div class="timeline-container primary">
+          <div class="timeline-icon">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-body">
+            <h4 class="timeline-title"><span class="badge">Q4 2025</span></h4>
+            <h2
+              class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
+              Lanzamiento y Adquisición
+            </h2>
+            <p>Primera emisión de tokens y compra del territorio piloto, asegurado con instrumentos de conservación a
+              perpetuidad.</p>
+            <p class="timeline-subtitle">Oct–Dec 2025</p>
+          </div>
+        </div>
+        <div class="timeline-container primary">
+          <div class="timeline-icon">
+            <i class="fa fa-leaf" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-body">
+            <h4 class="timeline-title"><span class="badge">Q1 2026</span></h4>
+            <h2
+              class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
+              Construcción Consciente
+            </h2>
+            <p>Despliegue de la infraestructura piloto de mínimo impacto: eco-lodge modular y senderos
+              interpretativos.</p>
+            <p class="timeline-subtitle">Ene–Mar 2026</p>
+          </div>
+        </div>
+        <div class="timeline-container primary">
+          <div class="timeline-icon">
+            <i class="fa fa-map-signs" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-body">
+            <h4 class="timeline-title"><span class="badge">Q2 2026</span></h4>
+            <h2
+              class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
+              Inicio de Operaciones
+            </h2>
+            <p>Lanzamiento de las primeras experiencias turísticas. Recopilación de datos para optimizar el retorno y
+              la experiencia.</p>
+            <p class="timeline-subtitle">Abr–Jun 2026</p>
+          </div>
+        </div>
+        <div class="timeline-container primary">
+          <div class="timeline-icon">
+            <i class="fa fa-chart-line"></i>
+          </div>
+          <div class="timeline-body">
+            <h4 class="timeline-title"><span class="badge">Q3 2026+</span></h4>
+            <h2
+              class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem] pb-[1rem] ">
+              Expansión y Réplica
+            </h2>
+            <p>Escalar el modelo a nuevos territorios. Iniciar un nuevo ciclo de adquisición, tokenización y
+              protección.</p>
+            <p class="timeline-subtitle">Jul 2026+</p>
+          </div>
+        </div>
+      </div>
+      <div class="self-stretch relative text-[1.25rem] leading-[130%] font-medium py-[3rem]">
+        La confianza se construye con acciones, no solo con promesas. Nuestro roadmap es un compromiso público con
+        la transparencia y la ejecución. Cada hito está diseñado para ser medible, verificable y para acercarnos a
+        un futuro donde miles de hectáreas estén protegidas bajo este modelo.
+      </div>
+      </div>
+    </section>
   </section>
   <section
     class="self-stretch overflow-hidden flex flex-col items-center justify-start py-[3.5rem] px-[10.5rem] gap-[7.5rem] bg-[url('/public/footer.webp')] bg-cover bg-no-repeat bg-[top] z-[5] text-left text-[1rem] text-[#fff] font-[Geist]">
@@ -485,5 +536,9 @@
     </div>
   </section>
   </div>
+  <!-- scripts -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script src="./faq.js"></script>
 </body>
+
 </html>
