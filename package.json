@@ -14,5 +14,8 @@
     "start": "parcel ./*.html ",
     "build": "parcel build ./*.html  --dist-dir ./build"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
