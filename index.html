@@ -20,17 +20,17 @@
 <body>
   <div class="w-full relative bg-[#fff] overflow-hidden flex flex-col items-center justify-start">
     <section id="hero"
-      class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-[#203b40] font-[Geist]">
+      class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-white font-[Geist] text-shadow-[0px_3px_16px_rgba(0,0,0,_0.25)]">
       <video class="absolute top-0 left-0 w-full h-full object-cover -z-10" autoplay loop muted playsinline
         src="/public/hero-clouds-bg.mp4"></video>
       <div
-        class="w-full flex-1 flex flex-col items-center justify-center min-w-[17.563rem] max-w-[69rem] z-[0] mix-blend-color-burn">
+        class="w-full flex-1 flex flex-col items-center justify-center min-w-[17.563rem] max-w-[69rem] z-[0]">
         <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] mix-blend-color-burn">
+          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
           Toma un pedazo del
         </h2>
         <h1
-          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif'] mix-blend-color-burn">
+          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
           paraíso
         </h1>
       </div>
@@ -55,11 +55,11 @@
       </div>
     </section>
     <section id="Tierra"
-      class="self-stretch [background:linear-gradient(180deg,_#fff,_#e7f4ff)] overflow-hidden flex flex-col items-center justify-center px-[10.5rem] pt-[10.5rem] pb-[3rem] gap-[3rem] z-[1] text-left text-[1.25rem] text-[#131a1b] font-[Geist]">
-      <section id="Dirt"
-        class="w-full flex flex-col items-center justify-start min-w-[17.563rem] max-w-[69rem] text-left text-[6rem] text-[#fff] font-[Geist] pb-12">
+      class="clamped-container self-stretch [background:linear-gradient(180deg,_#fff,_#e7f4ff)] overflow-hidden flex flex-col items-center justify-center pt-[10.5rem] pb-[3rem] gap-[3rem] z-[1] text-left text-[1.25rem] text-[#131a1b] font-[Geist]">
+      <div id="Dirt"
+        class="w-full flex flex-col items-center justify-start max-w-[69rem] text-left text-[6rem] text-[#fff] font-[Geist] pb-12">
         <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-black font-[inherit] text-transparent !bg-clip-text [background:linear-gradient(180deg,_#d4ecff,_#e7f4ff_48.56%,_#fff)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
+          class="self-stretch w-full relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-black font-[inherit] text-transparent !bg-clip-text [background:linear-gradient(180deg,_#d4ecff,_#e7f4ff_48.56%,_#fff)]">
           PATAGONIA PROTOCOL
         </h2>
         <div
@@ -82,7 +82,7 @@
             </h2>
           </div>
         </div>
-      </section>
+      </div>
       <div
         class="w-full flex flex-col items-center justify-center py-[1.5rem] box-border gap-[0.625rem] min-w-[17.563rem]">
         <div class="self-stretch relative leading-[150%] font-medium">
@@ -100,7 +100,7 @@
       </div>
     </section>
     <section id="Proyecto"
-      class="self-stretch [background:linear-gradient(180deg,_#e7f4ff,_#fff)] flex-1 flex flex-col items-center justify-start flex-wrap py-[6rem] px-[10.5rem]">
+      class="clamped-container self-stretch [background:linear-gradient(180deg,_#e7f4ff,_#fff)] flex-1 flex flex-col items-center justify-start flex-wrap py-[6rem]">
       <!-- putting title and crossfade slider in a adaptive container- even when I don't need to :v -->
       <div id="title and crossfade container"
         class="min-h-dvh max-h-full self-stretch flex flex-col items-start justify-start py-[1.5rem] gap-[1.75rem]">
@@ -186,28 +186,29 @@
         </div>
       </div><!-- Accordion -->
     </section>
-    <section
-      class="w-full flex flex-col items-start justify-center pb-[6rem] px-[0rem] box-border gap-auto min-w-[17.563rem] max-w-[69rem] text-left text-[2.5rem] text-[#006eb7] font-[Geist]">
-      <div class="flex flex-row items-center justify-start gap-[0.75rem]">
-        <div class="w-[0.75rem] relative rounded-radius-round bg-[#006eb7] h-[0.75rem] overflow-hidden shrink-0">
-        </div>
-        <div class="relative leading-[150%] font-medium">Nuestro Proceso</div>
-      </div>
+    <section id="Proceso"
+      class="clamped-container self-stretch flex-1 flex flex-col items-center justify-start pb-[6rem] gap-auto">
+      <div class="self-stretch flex flex-col items-start justify-start gap-[1.5rem]">
+            <div class="flex flex-row items-center justify-start gap-[0.75rem]">
+              <div class="w-[0.75rem] relative rounded-radius-round bg-[#006eb7] h-[0.75rem] overflow-hidden shrink-0">
+              </div>
+              <div class="relative leading-[150%] font-medium">Nuestro Proceso</div>
+            </div>
+            <div class="self-stretch flex flex-col items-start justify-start text-[3rem]">
+              <h1
+                class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-[inherit]">
+                De la Protección al
+              </h1>
+              <h2
+                class="m-0 self-stretch relative text-[4rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
+                Retorno
+              </h2>
+            </div>
+          </div>
       <div
-        class="flex-1 flex flex-col items-start justify-start flex-wrap content-start min-w-[17.563rem] text-[3rem] text-[#131a1b]">
-        <h2
-          class="m-0 flex-1 relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
-          De la protección al
-        </h2>
-        <h2
-          class="m-0 relative text-[4rem] tracking-[-0.04em] leading-[80%] italic font-normal font-['Instrument_Serif']">
-          Retorno
-        </h2>
-      </div>
-      <div
-        class="w-full flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] max-w-[69rem] py-[6rem]">
-        <section
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+        class="w-full flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] py-[6rem]">
+        <div
+          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
           <div
             class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
             <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
@@ -240,9 +241,9 @@
               custodio y beneficiario directo de la salud del territorio.
             </div>
           </div>
-        </section>
-        <section
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] max-w-[33.875rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+        </div>
+        <div
+          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
           <div
             class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
             <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
@@ -276,13 +277,13 @@
               el paraguas de la conservación.
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
   </div>
 
   <section id="blockchain"
-    class="self-stretch rounded-t-[48px] rounded-b-none bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center py-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
+    class="clamped-container self-stretch rounded-t-[48px] rounded-b-none bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center py-[6rem] gap-[4rem] z-[4]">
     <section
       class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
       <div class="flex flex-row items-center justify-start gap-[0.75rem]">
@@ -318,7 +319,7 @@
       <button
         class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]">
         <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
-          Habla con nosotros
+          ¿Tienes dudas?
         </div>
         <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
       </button>
@@ -326,13 +327,13 @@
     <section
       class="flex-1 flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
       <h2
-        class="m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-[17.563rem]">
+        class="flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] inline-block min-w-full">
         Tu Token, más que un activo, es:
       </h2>
       <div
-        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        class="self-stretch min-w-full flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem]">
         <h2
-          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
+          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block">
           Propiedad Real y Tangible
         </h2>
         <div class="self-stretch relative leading-[130%] font-medium">
@@ -342,9 +343,9 @@
         </div>
       </div>
       <div
-        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        class="self-stretch min-w-full flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem]">
         <h2
-          class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
+          class="self-stretch min-w-full m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block">
           Acceso Exclusivo a la Naturaleza
         </h2>
         <div class="self-stretch relative leading-[130%] font-medium text-[#fff]">
@@ -354,7 +355,7 @@
         </div>
       </div>
       <div
-        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem]">
+        class="self-stretch flex-1 rounded-3xl bg-[#203b40] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem]">
         <h2
           class="self-stretch m-0 flex-1 relative text-[2rem] tracking-[-0.04em] leading-[100%] font-medium font-[inherit] text-[#6edff3] inline-block min-w-[17.563rem]">
           Participación en los Ingresos
@@ -368,7 +369,7 @@
     </section>
   </section>
   <section id="roadmap"
-    class="self-stretch bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center pb-[6rem] px-[10.5rem] gap-[4rem] z-[4]">
+    class="clamped-container self-stretch bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center pb-[6rem] gap-[4rem] z-[4]">
     <section
       class="flex-1 flex flex-col items-start justify-start gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]">
       <div class="flex flex-row items-center justify-start gap-[0.75rem]">
@@ -493,39 +494,32 @@
       </div>
     </section>
   </section>
-  <section
-    class="self-stretch overflow-hidden flex flex-col items-center justify-start py-[3.5rem] px-[10.5rem] gap-[7.5rem] bg-[url('/public/footer.webp')] bg-cover bg-no-repeat bg-[top] z-[5] text-left text-[1rem] text-[#fff] font-[Geist]">
+  <footer
+    class="clamped-container h-dvh self-stretch overflow-hidden flex flex-col items-stretch justify-between pt-[30vh] pb-[1rem] gap-[7.5rem] bg-[url('/public/footer.webp')] bg-cover bg-no-repeat bg-[top] z-[5] text-left text-[1rem] text-[#fff] font-[Geist]">
     <section
       class="w-full flex flex-col items-center justify-start gap-[1.5rem] min-w-[17.563rem] max-w-[69rem] text-center text-[3rem] text-[#fff] font-[Geist]">
       <div class="w-full flex flex-col items-start justify-start min-w-[17.563rem] max-w-[69rem]">
         <h2
           class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
-          Hagamos la
+          Inivierte en el
         </h2>
         <h2
           class="m-0 self-stretch relative text-[6.25rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
-          diferencia
+          Paraíso
         </h2>
       </div>
       <button
         class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center">
         <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#131a1b] text-left">
-          Contáctanos
+          ¡Hablemos!
         </div>
       </button>
     </section>
     <div
-      class="self-stretch text-shadow-[0px_2px_8px_rgba(0,_0,_0,_0.8)] flex flex-row items-center justify-between flex-wrap content-center gap-x-[0rem] gap-y-[0.625rem] min-w-[17.563rem]">
-      <div class="flex flex-row items-center justify-start gap-[1.5rem]">
-        <div class="relative leading-[150%] font-medium">Instagram</div>
-        <div class="relative leading-[150%] font-medium">YouTube</div>
-        <div class="relative leading-[150%] font-medium">LinkedIn</div>
-      </div>
-      <div class="relative leading-[150%] font-medium text-center">
-        ©2024 Patagonia Protocol
-      </div>
+      class="self-stretch text-shadow-[0px_2px_8px_rgba(255,_255,_255,_0.8)] flex flex-row items-center justify-center flex-wrap content-center gap-y-[0.625rem] font-[Geist] leading-[150%] text-[#131a1b]">
+      Patagonia Protocol © 2024
     </div>
-  </section>
+  </footer>
   </div>
   <!-- scripts -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>

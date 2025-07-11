@@ -12,3 +12,11 @@ body {
     border-width: 0;
   }
 }
+.clamped-container {
+  /*
+   * The padding will try to be 5vw, but...
+   * - It will NOT go below 1rem.
+   * - It will NOT go above 4rem.
+   */
+  padding-inline: clamp(1rem, 20vw, 10vw);
+}
