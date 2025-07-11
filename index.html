@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="./timeline.css" />
   <link rel="stylesheet" href="./crossfade.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./faq.css">
 </head>
 
@@ -26,11 +27,15 @@
       <div
         class="w-full flex-1 flex flex-col items-center justify-center min-w-[17.563rem] max-w-[69rem] z-[0]">
         <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]">
+          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           Toma un pedazo del
         </h2>
         <h1
-          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']">
+          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="2000">
           paraíso
         </h1>
       </div>
@@ -39,7 +44,7 @@
         alt="Patagonia Mountains" src="/public/patagonia-mountains.webp" />
 
       <div
-        class="!!m-[0 important] absolute top-[calc(50%_+_152px)] left-[calc(50%_-_135px)] flex flex-row items-start justify-start gap-[0.75rem] z-[2]">
+        class="!!m-[0 important] absolute top-[calc(50%_+_152px)] left-[calc(50%_-_135px)] flex flex-row items-start justify-start gap-[0.75rem] z-[2]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
         <button
           class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center">
           <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#131a1b] text-left">
@@ -57,7 +62,7 @@
     <section id="Tierra"
       class="clamped-container self-stretch [background:linear-gradient(180deg,_#fff,_#e7f4ff)] overflow-hidden flex flex-col items-center justify-center pt-[10.5rem] pb-[3rem] gap-[3rem] z-[1] text-left text-[1.25rem] text-[#131a1b] font-[Geist]">
       <div id="Dirt"
-        class="w-full flex flex-col items-center justify-start max-w-[69rem] text-left text-[clamp(4.5rem,10vw,6rem)] text-[#fff] font-[Geist] pb-12">
+        class="w-full flex flex-col items-center justify-start max-w-[69rem] text-left text-[clamp(4.5rem,10vw,6rem)] text-[#fff] font-[Geist] pb-12" data-aos="fade-up">
         <h2
           class="relative w-auto tracking-[-0.04em] leading-[100%] font-black font-[inherit] text-center text-transparent !bg-clip-text [background:linear-gradient(180deg,_#d4ecff,_#e7f4ff_48.56%,_#fff)]">
           PATAGONIA PROTOCOL
@@ -84,7 +89,7 @@
         </div>
       </div>
       <div
-        class="w-full flex flex-col items-center justify-center py-[1.5rem] box-border gap-[0.625rem] min-w-[17.563rem]">
+        class="w-full flex flex-col items-center justify-center py-[1.5rem] box-border gap-[0.625rem] min-w-[17.563rem]" data-aos="fade-up" data-aos-delay="100">
         <div class="self-stretch relative leading-[150%] font-medium">
           Revolucionamos la conservación. Creamos un modelo donde proteger la
           naturaleza no solo es un acto de generosidad, sino una inversión
@@ -208,7 +213,7 @@
       <div
         class="w-full flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] py-[6rem]">
         <div
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]" data-aos="fade-right">
           <div
             class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
             <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
@@ -243,7 +248,7 @@
           </div>
         </div>
         <div
-          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
+          class="flex-1 flex flex-col items-start justify-start min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]" data-aos="fade-left" data-aos-delay="100">
           <div
             class="self-stretch shadow-[0px_0px_31px_rgba(0,_110,_183,_0.12)] rounded-3xl bg-[#fff] flex flex-col items-start justify-start p-[2rem] box-border gap-[1.5rem] min-w-[17.563rem] min-h-[27.5rem]">
             <img class="w-[7.5rem] relative max-h-full object-cover" loading="lazy" alt=""
@@ -524,6 +529,10 @@
   <!-- scripts -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
   <script src="./faq.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

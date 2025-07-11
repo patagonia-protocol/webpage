@@ -16,6 +16,7 @@
   },
   "version": "1.0.0",
   "dependencies": {
+    "aos": "^2.3.4",
     "normalize.css": "^8.0.1"
   }
 }
