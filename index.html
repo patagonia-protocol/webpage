@@ -47,6 +47,65 @@
 </head>
 
 <body>
+  <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm shadow-lg z-50 font-Geist">
+    <div class="clamped-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#hero" class="text-2xl font-black text-[#131a1b]">PATAGONIA <span
+              class="italic font-normal font-['Instrument_Serif']">Protocol</span></a>
+        </div>
+        <div class="hidden md:ml-6 md:flex md:space-x-8">
+          <a href="#Tierra"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">¿Qué
+            Hacemos?</a>
+          <a href="#Proyecto"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">Proyecto</a>
+          <a href="#Proceso"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">Proceso</a>
+          <a href="#Blockchain"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">Blockchain</a>
+          <a href="#Roadmap"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">Roadmap</a>
+          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-900 hover:border-[#006eb7] hover:text-[#006eb7]">Contacto</a>
+        </div>
+        <div class="-mr-2 flex items-center md:hidden">
+          <button type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#006eb7]"
+            aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#Tierra"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Tierra</a>
+        <a href="#Proyecto"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Proyecto</a>
+        <a href="#Proceso"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Proceso</a>
+        <a href="#Blockchain"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Blockchain</a>
+        <a href="#Roadmap"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Roadmap</a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+          target="_blank" rel="noopener noreferrer"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-[#006eb7]">Contacto</a>
+      </div>
+    </div>
+  </nav>
   <div class="w-full relative bg-[#fff] overflow-hidden flex flex-col items-center justify-start">
     <section id="hero"
       class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-white font-[Geist] text-shadow-[0px_3px_16px_rgba(0,0,0,_0.25)]">
@@ -71,18 +130,19 @@
       <div
         class="!!m-[0 important] absolute top-[calc(50%_+_152px)] left-[calc(50%_-_135px)] flex flex-row items-start justify-start gap-[0.75rem] z-[2]"
         data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
-        <button
+        <a href="#Proyecto"
           class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center">
           <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#131a1b] text-left">
             Proyecto
           </div>
-        </button>
-        <button
+        </a>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+          target="_blank" rel="noopener noreferrer"
           class="cursor-pointer border-[#006eb7] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#006eb7] rounded-radius-main flex flex-row items-center justify-center">
           <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#fff] text-left">
             Contáctanos
           </div>
-        </button>
+        </a>
       </div>
     </section>
     <section id="Tierra"
@@ -316,8 +376,8 @@
       </div>
     </section>
   </div>
-
-  <section id="blockchain"
+  <div id="Blockchain" class="relative"></div>
+  <section
     class="clamped-container self-stretch rounded-t-[48px] rounded-b-none bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center py-[6rem] gap-[4rem] z-[4]"
     data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="500">
     <section
@@ -353,14 +413,15 @@
           bosque, un glaciar y un modelo de negocio sostenible.
         </div>
       </div>
-      <button
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+        target="_blank" rel="noopener noreferrer"
         class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]"
         data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="1000">
         <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
           ¿Tienes dudas?
         </div>
         <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
-      </button>
+      </a>
     </section>
     <section
       class="flex-1 flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] min-w-[17.563rem] text-left text-[1.25rem] text-[#fff] font-[Geist]"
@@ -407,7 +468,7 @@
       </div>
     </section>
   </section>
-  <section id="roadmap"
+  <section id="Roadmap"
     class="clamped-container self-stretch bg-[#131a1b] overflow-hidden flex flex-row items-start justify-center flex-wrap content-center pb-[6rem] gap-[4rem] z-[4]">
     <section
       class="h-dvh flex-1 flex flex-col items-start justify-center gap-[3rem] min-w-[17.563rem] text-left text-[1rem] text-[#fff] font-[Geist]"
@@ -439,14 +500,15 @@
           un futuro donde miles de hectáreas estén protegidas bajo este modelo.
         </div>
       </div>
-      <button
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+        target="_blank" rel="noopener noreferrer"
         class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center gap-[1.25rem]"
         data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-out" data-aos-duration="300">
         <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#203b40] text-left">
-          Habla con nosotros
+          ¿Quieres saber más?
         </div>
         <img class="h-[1rem] w-[1rem] relative" alt="" src="/public/arrow-link.svg" />
-      </button>
+      </a>
     </section>
     <section
       class="flex flex-row items-start justify-start flex-wrap content-start gap-[1.25rem] text-left text-[1.25rem] text-[#fff] font-[Geist]">
@@ -538,7 +600,7 @@
   </section>
   <footer
     class="clamped-container h-dvh self-stretch overflow-hidden flex flex-col items-stretch justify-between pt-[30vh] pb-[1rem] gap-[7.5rem] bg-[url('/public/footer.webp')] bg-cover bg-no-repeat bg-[top] z-[5] text-left text-[1rem] text-[#fff] font-[Geist]">
-    <section
+    <section id="Footer"
       class="w-full flex flex-col items-center justify-start gap-[1.5rem] min-w-[17.563rem] max-w-[69rem] text-center text-[3rem] text-[#fff] font-[Geist]">
       <div class="w-full flex flex-col items-start justify-start min-w-[17.563rem] max-w-[69rem]">
         <h2
@@ -552,13 +614,14 @@
           Paraíso
         </h2>
       </div>
-      <button
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
+        target="_blank" rel="noopener noreferrer"
         class="cursor-pointer border-[#fff] border-solid border-border-width-main py-[0.75rem] px-[1.5rem] bg-[#fff] rounded-radius-main flex flex-row items-center justify-center"
         data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1800" data-aos-delay="500">
         <div class="relative text-[1rem] leading-[150%] font-medium font-[Geist] text-[#131a1b] text-left">
           ¡Hablemos!
         </div>
-      </button>
+      </a>
     </section>
     <div
       class="self-stretch text-shadow-[0px_2px_8px_rgba(255,_255,_255,_0.8)] flex flex-row items-center justify-center flex-wrap content-center gap-y-[0.625rem] font-[Geist] leading-[150%] text-[#131a1b]">
@@ -568,6 +631,7 @@
   <!-- scripts -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
   <script src="./faq.js"></script>
+  <script src="./navbar.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

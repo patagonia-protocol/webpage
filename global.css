@@ -20,3 +20,6 @@ body {
    */
   padding-inline: clamp(1rem, 20vw, 10vw);
 }
+html {
+  scroll-behavior: smooth;
+}
