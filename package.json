@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "Ruy River",
   "description": "",
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.15.4",
@@ -14,7 +14,7 @@
   "name": "patagonia_page",
   "scripts": {
     "start": "parcel ./*.html ",
-    "build": "parcel build ./*.html  --dist-dir ./build"
+    "build": "parcel build ./*.html  --dist-dir ./dist"
   },
   "version": "1.0.0",
   "dependencies": {
