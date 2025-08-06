@@ -109,8 +109,7 @@
   <div class="w-full relative bg-[#fff] overflow-hidden flex flex-col items-center justify-start">
     <section id="hero"
       class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-white font-[Geist] text-shadow-[0px_3px_16px_rgba(0,0,0,_0.25)]">
-      <video class="absolute top-0 left-0 w-full h-full object-cover -z-10" autoplay loop muted playsinline
-        src="/public/hero-clouds-bg.mp4"></video>
+      <div id="hero-clouds" class="absolute top-0 left-0 w-full h-full -z-10"></div>
       <div class="w-full flex-1 flex flex-col items-center justify-center min-w-[17.563rem] max-w-[69rem] z-[0]">
         <h2
           class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]"
@@ -630,11 +629,50 @@
   </footer>
   <!-- scripts -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/pixi.js/2.0.0/pixi.js'></script>
+  <script src="./pixi-clouds-component.js"></script>
   <script src="./faq.js"></script>
   <script src="./navbar.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Initialize Pixi.js Clouds Component for hero background
+    let heroClouds;
+
+    function initHeroClouds() {
+      heroClouds = new PixiCloudsComponent({
+        container: '#hero-clouds',
+        width: window.innerWidth,
+        height: window.innerHeight,
+        mouseTracking: false,
+        fixedMouseX: window.innerWidth * 0.5,
+        fixedMouseY: window.innerHeight * 0.4,
+        backgroundColor: 0x000000
+      });
+    }
+
+    // Initialize clouds when page loads
+    window.addEventListener('load', initHeroClouds);
+
+    // Handle window resize with throttling for performance
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (heroClouds) {
+          heroClouds.resize(window.innerWidth, window.innerHeight);
+          heroClouds.setFixedMousePosition(window.innerWidth * 0.5, window.innerHeight * 0.4);
+        }
+      }, 250); // Throttle resize events
+    });
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', () => {
+      if (heroClouds) {
+        heroClouds.destroy();
+      }
+    });
   </script>
 </body>
 

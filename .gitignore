@@ -1,24 +1,33 @@
 
 # OS generated files
-.DS_Store # macOS folder settings
-Thumbs.db # Windows image file cache
-Desktop.ini # Windows desktop icon settings
+
+## macOS folder settings
+.DS_Store
+## Windows image file cache
+Thumbs.db 
+## Windows desktop icon settings
+Desktop.ini 
 
 # Editor directories and files
-.vscode/   # Visual Studio Code settings
+
+## Visual Studio Code settings
+/.vscode   
+.vscode
+.vscode/
+
 .idea/   # IntelliJ IDEA settings
 *.swp   # Vim swap files
 *.swo   # Vim swap files
 *.swn   # Vim swap files
 
 # Temporary or cache files
-*.tmp   # Temporary files
-*.temp  # Temporary files
-*.cache   # Cache files
-*.bak   # Backup files
+*.tmp   
+*.temp 
+*.cache   
+*.bak   
 
 # Others
-*.log   # Log files
+*.log 
 /vertical-dark-timeline
 
 # dependencies
@@ -33,3 +42,4 @@ Desktop.ini # Windows desktop icon settings
 .parcel-cache
 /.parcel-cache
 /dist
+/pixi
