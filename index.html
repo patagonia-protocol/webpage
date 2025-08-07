@@ -44,6 +44,17 @@
   <link rel="stylesheet" href="./crossfade.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./faq.css">
+  <style>
+    /* Pixi Clouds Fade-in Animation */
+    #hero-clouds canvas {
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    #hero-clouds canvas.fade-in {
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -51,8 +62,7 @@
     <div class="clamped-container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex-shrink-0 flex items-center">
-          <a href="#hero" class="text-2xl font-black text-[#131a1b]">PATAGONIA <span
-              class="italic font-normal font-['Instrument_Serif']">Protocol</span></a>
+          <img src="/public/p_logo.svg" alt="Patagonia Protocol Logo" class="h-8">
         </div>
         <div class="hidden md:ml-6 md:flex md:space-x-8">
           <a href="#Tierra"
@@ -108,18 +118,21 @@
   </nav>
   <div class="w-full relative bg-[#fff] overflow-hidden flex flex-col items-center justify-start">
     <section id="hero"
-      class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-white font-[Geist] text-shadow-[0px_3px_16px_rgba(0,0,0,_0.25)]">
-      <div id="hero-clouds" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+      class="self-stretch h-dvh rounded-t-none rounded-b-[32px] [background:linear-gradient(180deg,_rgba(255,_255,_255,_0.9),_rgba(255,_255,_255,_0))] overflow-hidden shrink-0 flex flex-col items-center justify-end pt-[9rem] px-[0rem] pb-[0rem] box-border relative z-[0] text-center text-[2.25rem] text-white font-[Geist]">
+      <div id="hero-clouds" class="absolute top-0 left-0 w-full h-full -z-10" style="background-image: url('/public/hero-clouds-fallback.webp'); 
+                  background-size: cover; 
+                  background-position: center; 
+                  background-repeat: no-repeat;"></div>
       <div class="w-full flex-1 flex flex-col items-center justify-center min-w-[17.563rem] max-w-[69rem] z-[0]">
         <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]"
+          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-medium font-['Instrument_Serif']"
           data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1500">
-          Toma un pedazo del
+          Toma un pedazo de la
         </h2>
         <h1
-          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']"
+          class="m-0 self-stretch relative text-[8.875rem] tracking-[-0.04em] leading-[100%] font-black font-[inherit]"
           data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1800">
-          paraíso
+          PATAGONIA
         </h1>
       </div>
       <img
@@ -603,14 +616,14 @@
       class="w-full flex flex-col items-center justify-center gap-[1.5rem] min-w-[17.563rem] text-center text-[3rem] text-[#fff] font-[Geist]">
       <div class="w-full flex flex-col items-center justify-center min-w-[17.563rem]">
         <h2
-          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] font-medium font-[inherit]"
+          class="m-0 self-stretch relative text-[length:inherit] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']"
           data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="1500">
-          Invierte en el
+          Invierte en la
         </h2>
         <h2
-          class="m-0 self-stretch relative text-[6.25rem] tracking-[-0.04em] leading-[100%] italic font-normal font-['Instrument_Serif']"
+          class="m-0 self-stretch relative text-[6.25rem] tracking-[-0.04em] leading-[100%] font-black font-[inherit]"
           data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1800" data-aos-delay="200">
-          Paraíso
+          PATAGONIA
         </h2>
       </div>
       <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wQ759hU89bnc_D0-bgZkF3NZd-tQMQNz-40gyLmyLFS8MgjAvLgO0uRPEXMWMxatfJPOXHUZQ"
@@ -637,19 +650,52 @@
   <script>
     AOS.init();
 
-    // Initialize Pixi.js Clouds Component for hero background
+    // Initialize Pixi.js Clouds Component for hero background with fallback
     let heroClouds;
 
+    function detectWebGLSupport() {
+      try {
+        const canvas = document.createElement('canvas');
+        return !!(canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
+      } catch (e) {
+        return false;
+      }
+    }
+
     function initHeroClouds() {
-      heroClouds = new PixiCloudsComponent({
-        container: '#hero-clouds',
-        width: window.innerWidth,
-        height: window.innerHeight,
-        mouseTracking: false,
-        fixedMouseX: window.innerWidth * 0.5,
-        fixedMouseY: window.innerHeight * 0.4,
-        backgroundColor: 0x000000
-      });
+      // Check if WebGL is supported and Pixi is available
+      if (!detectWebGLSupport() || typeof PixiCloudsComponent === 'undefined') {
+        console.log('WebGL not supported or Pixi not loaded, using fallback image');
+        return; // Keep the fallback image
+      }
+
+      try {
+        heroClouds = new PixiCloudsComponent({
+          container: '#hero-clouds',
+          width: window.innerWidth,
+          height: window.innerHeight,
+          mouseTracking: false,
+          fixedMouseX: window.innerWidth * 0.5,
+          fixedMouseY: window.innerHeight * 0.4,
+          backgroundColor: 0x000000
+        });
+
+        // Hide fallback image and trigger fade-in animation once Pixi is successfully initialized
+        const container = document.getElementById('hero-clouds');
+        if (container && heroClouds.renderer) {
+          // Small delay to ensure canvas is rendered
+          setTimeout(() => {
+            container.style.backgroundImage = 'none';
+            const canvas = heroClouds.renderer.view;
+            if (canvas) {
+              canvas.classList.add('fade-in');
+            }
+          }, 100);
+        }
+      } catch (error) {
+        console.warn('Failed to initialize Pixi clouds, using fallback:', error);
+        // Keep the fallback image
+      }
     }
 
     // Initialize clouds when page loads

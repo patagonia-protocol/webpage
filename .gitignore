@@ -41,5 +41,7 @@ Desktop.ini
 !.yarn/versions
 .parcel-cache
 /.parcel-cache
+
 /dist
 /pixi
+builder.config.json

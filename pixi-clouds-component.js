@@ -34,9 +34,9 @@ class PixiCloudsComponent {
   }
 
   init() {
-    // Create Pixi stage and renderer
-    this.stage = new PIXI.Stage(this.config.backgroundColor, this.config.interactive);
-    this.renderer = PIXI.autoDetectRenderer(this.config.width, this.config.height);
+    // Create Pixi stage and renderer (PIXI v2 compatibility)
+    this.stage = new PIXI.Stage(this.config.backgroundColor);
+    this.renderer = new PIXI.WebGLRenderer(this.config.width, this.config.height);
 
     // Append to specified container
     const container = typeof this.config.container === 'string'
@@ -72,14 +72,14 @@ class PixiCloudsComponent {
       }
     };
 
-    // Create shader
-    this.shader = new PIXI.AbstractFilter(this.getFragmentShader(), this.uniforms);
+    // Create shader (PIXI v2 compatibility)
+    this.shader = new PIXI.AbstractFilter([this.getFragmentShader().join('\n')], this.uniforms);
 
     // Create background sprite
     this.bg = PIXI.Sprite.fromImage("https://s3-us-west-2.amazonaws.com/s.cdpn.io/167451/test_BG.jpg");
     this.bg.width = this.config.width;
     this.bg.height = this.config.height;
-    this.bg.shader = this.shader;
+    this.bg.filters = [this.shader];
     this.stage.addChild(this.bg);
 
     // Start animation if autoStart is enabled
@@ -170,13 +170,19 @@ class PixiCloudsComponent {
   animate() {
     this.count += 0.01;
 
-    // Handle mouse tracking
+    // Handle mouse tracking (PIXI v2 compatibility)
     if (this.config.mouseTracking) {
-      this.mouse = this.stage.getMousePosition();
-      if (this.mouse.x > 0 && this.mouse.y > 0) {
+      try {
+        this.mouse = this.stage.interactionManager.mouse.global || { x: this.config.fixedMouseX, y: this.config.fixedMouseY };
         this.shader.uniforms.iMouse.value = {
           x: this.mouse.x,
           y: this.mouse.y
+        };
+      } catch (e) {
+        // Fallback to fixed position if mouse tracking fails
+        this.shader.uniforms.iMouse.value = {
+          x: this.config.fixedMouseX,
+          y: this.config.fixedMouseY
         };
       }
     } else {
@@ -188,7 +194,6 @@ class PixiCloudsComponent {
     }
 
     this.shader.uniforms.iGlobalTime.value = this.count;
-    this.shader.syncUniforms();
     this.renderer.render(this.stage);
 
     this.animationId = requestAnimationFrame(() => this.animate());
