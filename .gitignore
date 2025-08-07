@@ -9,11 +9,11 @@ Thumbs.db
 Desktop.ini 
 
 # Editor directories and files
-
-## Visual Studio Code settings
 /.vscode   
 .vscode
 .vscode/
+.kiro
+.trae
 
 .idea/   # IntelliJ IDEA settings
 *.swp   # Vim swap files
@@ -29,6 +29,9 @@ Desktop.ini
 # Others
 *.log 
 /vertical-dark-timeline
+/dist
+/pixi
+builder.config.json
 
 # dependencies
 /node_modules
@@ -41,7 +44,3 @@ Desktop.ini
 !.yarn/versions
 .parcel-cache
 /.parcel-cache
-
-/dist
-/pixi
-builder.config.json
