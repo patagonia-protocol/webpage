@@ -13,8 +13,8 @@
   "license": "ISC",
   "name": "patagonia_page",
   "scripts": {
-    "start": "parcel ./*.html ",
-    "build": "parcel build ./*.html  --dist-dir ./build"
+    "start": "parcel ./*.html --open",
+    "build": "parcel build ./*.html --dist-dir ./dist"
   },
   "version": "1.0.0",
   "dependencies": {
